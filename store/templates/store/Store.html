@@ -1,12 +1,39 @@
+{% extends 'store/main.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'store/main.css' %}">
-</head>
-<body>
- <h3>Store</h3>
-</body>
-</html>
+{% block content %}
+    <div class="row">
+        <!-- THUMBNAILS -->
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'store/images/placeholder.png' %}">
+            <div class="box-element product">
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="btn btn-outline-secondary add-brn">Add to Cart</button> <!--add to cart button-->
+                <a class="btn btn-outline-sucess" href="#">View</a>
+                <h4 style="display:inline-block; float:right">$10</h4> <!--hardcoded value for now-->
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'store/images/placeholder.png' %}">
+            <div class="box-element product">
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="btn btn-outline-secondary add-brn">Add to Cart</button> <!--add to cart button-->
+                <a class="btn btn-outline-sucess" href="#">View</a>
+                <h4 style="display:inline-block; float:right">$10</h4> <!--hardcoded value for now-->
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'store/images/placeholder.png' %}">
+            <div class="box-element product">
+                <h6><strong>Product</strong></h6>
+                <hr>
+                <button class="btn btn-outline-secondary add-brn">Add to Cart</button> <!--add to cart button-->
+                <a class="btn btn-outline-sucess" href="#">View</a>
+                <h4 style="display:inline-block; float:right">$10</h4> <!--hardcoded value for now-->
+        </div>
+
+    </div>
+{% endblock content %}
