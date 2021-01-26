@@ -123,11 +123,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/store'),
 ]
 
-#uplading images resolves to upload to this path
-MEDIA_ROOT = os.path.join(BASE_DIR, 'store/static/store/images')
+#uploading images resolves to upload to this path
+s = 'store/static/store/'
+MEDIA_ROOT = os.path.join(BASE_DIR, s + 'images')
+
+MEDIA_URL = "/images/"
 
 
 

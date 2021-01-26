@@ -27,6 +27,15 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    #model URL method for image field (default picture)
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
+
 class Order(models.Model):
     #setting FK to Customer ,if customer gets deleted it does not delete the order, it sets customer value to NULL
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
