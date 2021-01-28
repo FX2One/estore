@@ -42,7 +42,7 @@
                         <img class="chg-quantity" src="{% static 'store/images/arrow-down.png' %}">
                     </div>
                 </div>
-                <div style="flex:1">40$</div>
+                <div style="flex:1">${{item.get_total}}</div> <!--query get_total from OrderItem with @property decorator-->
             </div>
             {% endfor %}
         </div>
